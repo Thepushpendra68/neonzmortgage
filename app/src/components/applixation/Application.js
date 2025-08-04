@@ -38,6 +38,7 @@ export default function Application () {
     const router = useRouter();
 
     const [step, setStep] = useState(1);
+    const [isMobile, setIsMobile] = useState(false);
 
     //mortgage need
     const [looking_for, setLookingFor] = useState('');
@@ -136,6 +137,17 @@ export default function Application () {
     }
 }, [step]);
 
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        
+        checkIfMobile();
+        window.addEventListener('resize', checkIfMobile);
+        
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
     const onUpdate = async () => {
         try {
             const {data} = await updateApplication(applicationId, {
@@ -212,28 +224,28 @@ export default function Application () {
                             <div className="journey-left">
                                  <div className="journer-tracker">
                                     {/* Progress Bar */}
-                                    <div className="progress-container" style={{marginBottom: '30px'}}>
+                                    <div className="progress-container" style={{marginBottom: isMobile ? '20px' : '30px'}}>
                                         <div className="progress-bar-wrapper" style={{
                                             width: '100%',
                                             backgroundColor: '#e0e0e0',
                                             borderRadius: '10px',
-                                            height: '10px',
+                                            height: isMobile ? '6px' : '10px',
                                             overflow: 'hidden'
                                         }}>
                                             <div className="progress-bar" style={{
                                                 width: `${Math.round((step / 9) * 100)}%`,
                                                 height: '100%',
-                                                backgroundColor: '#007bff',
+                                                backgroundColor: '#000000',
                                                 borderRadius: '10px',
                                                 transition: 'width 0.3s ease'
                                             }}></div>
                                         </div>
                                         <div className="progress-text" style={{
                                             textAlign: 'center',
-                                            marginTop: '10px',
-                                            fontSize: '18px',
+                                            marginTop: isMobile ? '8px' : '10px',
+                                            fontSize: isMobile ? '14px' : '18px',
                                             fontWeight: 'bold',
-                                            color: '#007bff'
+                                            color: '#000000'
                                         }}>
                                             {Math.round((step / 9) * 100)}% Complete
                                         </div>
@@ -241,21 +253,39 @@ export default function Application () {
 
                                     {/* Current Step Display */}
                                     <div className="current-step-display">
-                                        <div className="journey-tracker-item" style={{opacity: '1', borderLeft: '3px solid #007bff', paddingLeft: '15px'}}>
-                                            <div className="tracket-number" style={{
-                                                backgroundColor: '#007bff',
+                                        <style jsx>{`
+                                            .no-vertical-line::after {
+                                                display: none !important;
+                                            }
+                                        `}</style>
+                                        <div className="journey-tracker-item" style={{
+                                            opacity: '1', 
+                                            paddingLeft: '0px',
+                                            display: 'flex',
+                                            alignItems: isMobile ? 'center' : 'flex-start',
+                                            gap: isMobile ? '10px' : '15px',
+                                            marginBottom: isMobile ? '0px' : '10px'
+                                        }}>
+                                            <div className="tracket-number no-vertical-line" style={{
+                                                backgroundColor: '#000000',
                                                 color: 'white',
                                                 borderRadius: '50%',
-                                                width: '40px',
-                                                height: '40px',
+                                                width: isMobile ? '30px' : '40px',
+                                                height: isMobile ? '30px' : '40px',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                marginBottom: '10px'
+                                                marginBottom: '0px',
+                                                flexShrink: 0,
+                                                position: 'relative'
                                             }}>
-                                               <p className="text" style={{margin: '0'}}><strong>{step.toString().padStart(2, '0')}</strong></p>
+                                               <p className="text" style={{margin: '0', fontSize: isMobile ? '12px' : '14px'}}><strong>{step.toString().padStart(2, '0')}</strong></p>
                                             </div>
-                                            <div className="text journey-title" style={{fontSize: '16px', fontWeight: '600'}}>
+                                            <div className="text journey-title" style={{
+                                                fontSize: isMobile ? '14px' : '16px', 
+                                                fontWeight: '600',
+                                                display: isMobile ? 'none' : 'block'
+                                            }}>
                                                 {step === 1 && "Your Mortgage Needs"}
                                                 {step === 2 && "Financial Information"}
                                                 {step === 3 && "Approximate Budget?"}
