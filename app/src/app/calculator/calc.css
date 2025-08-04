@@ -1,0 +1,74 @@
+input[type="range"] {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;
+  margin: 20px 0;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #252525;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff !important;
+  border: 6px solid #252525 !important;
+  cursor: pointer;
+  margin-top: -8px; /* align thumb with track */
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: #252525;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff !important;
+  border: 6px solid #252525 !important;
+  cursor: pointer;
+}
+
+/* IE and Edge (legacy, optional) */
+input[type="range"]::-ms-track {
+  height: 4px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+  background: #252525;
+  border-radius: 25px;
+}
+
+input[type="range"]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff !important;
+  border: 6px solid #252525 !important;
+  cursor: pointer;
+}
