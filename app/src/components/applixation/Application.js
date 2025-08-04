@@ -211,65 +211,62 @@ export default function Application () {
                         <div className="col-sm-12 col-md-6 col-lg-4">
                             <div className="journey-left">
                                  <div className="journer-tracker">
-                                    <div className="journey-tracker-item" style={{opacity: step >= 1 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>01</strong></p>
+                                    {/* Progress Bar */}
+                                    <div className="progress-container" style={{marginBottom: '30px'}}>
+                                        <div className="progress-bar-wrapper" style={{
+                                            width: '100%',
+                                            backgroundColor: '#e0e0e0',
+                                            borderRadius: '10px',
+                                            height: '10px',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="progress-bar" style={{
+                                                width: `${Math.round((step / 9) * 100)}%`,
+                                                height: '100%',
+                                                backgroundColor: '#007bff',
+                                                borderRadius: '10px',
+                                                transition: 'width 0.3s ease'
+                                            }}></div>
                                         </div>
-                                        <div className="text journey-title">Your Mortgage Needs</div>
+                                        <div className="progress-text" style={{
+                                            textAlign: 'center',
+                                            marginTop: '10px',
+                                            fontSize: '18px',
+                                            fontWeight: 'bold',
+                                            color: '#007bff'
+                                        }}>
+                                            {Math.round((step / 9) * 100)}% Complete
+                                        </div>
                                     </div>
-                                    {/* <div className="journey-tracker-item" style={{opacity: step >= 2 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>02</strong></p>
+
+                                    {/* Current Step Display */}
+                                    <div className="current-step-display">
+                                        <div className="journey-tracker-item" style={{opacity: '1', borderLeft: '3px solid #007bff', paddingLeft: '15px'}}>
+                                            <div className="tracket-number" style={{
+                                                backgroundColor: '#007bff',
+                                                color: 'white',
+                                                borderRadius: '50%',
+                                                width: '40px',
+                                                height: '40px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                marginBottom: '10px'
+                                            }}>
+                                               <p className="text" style={{margin: '0'}}><strong>{step.toString().padStart(2, '0')}</strong></p>
+                                            </div>
+                                            <div className="text journey-title" style={{fontSize: '16px', fontWeight: '600'}}>
+                                                {step === 1 && "Your Mortgage Needs"}
+                                                {step === 2 && "Financial Information"}
+                                                {step === 3 && "Approximate Budget?"}
+                                                {step === 4 && "Financial Information"}
+                                                {step === 5 && "Provide Some more information"}
+                                                {step === 6 && "Resident Type"}
+                                                {step === 7 && "Just a few more details"}
+                                                {step === 8 && "Employment Status"}
+                                                {step === 9 && "Lets understand your finances"}
+                                            </div>
                                         </div>
-                                        <div className="text journey-title">Property Details </div>
-                                    </div> */}
-                                    <div className="journey-tracker-item" style={{opacity: step >= 2 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>02</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Financial Information</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 3 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>03</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Approximate Budget?</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 4 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>04</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Financial Information</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 5 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>05</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Provide Some more information </div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 6 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>06</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Resident Type</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 7 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>07</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Just a few more details</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 8 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>08</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Employment Status</div>
-                                    </div>
-                                    <div className="journey-tracker-item" style={{opacity: step >= 8 ? '1' : '.3'}}>
-                                        <div className="tracket-number">
-                                           <p className="text"><strong>09</strong></p>
-                                        </div>
-                                        <div className="text journey-title">Lets understand your finances</div>
                                     </div>
                                  </div>
                             </div>
