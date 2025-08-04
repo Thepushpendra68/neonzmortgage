@@ -68,8 +68,6 @@ export default function Journey () {
                                 </div>
                             </div>
                         </div>
-
-                        <button style={{marginTop:'30px'}} className="btn btn-primary btn-rounded btn-noicon btn-center">🚀 Apply Now & Get Pre-Approved Faster!</button>
                 </div>
             </section>
         </div>
