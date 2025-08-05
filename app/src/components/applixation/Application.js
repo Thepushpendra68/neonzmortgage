@@ -262,29 +262,16 @@ export default function Application () {
                                             opacity: '1', 
                                             paddingLeft: '0px',
                                             display: 'flex',
-                                            alignItems: isMobile ? 'center' : 'flex-start',
-                                            gap: isMobile ? '10px' : '15px',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
                                             marginBottom: isMobile ? '0px' : '10px'
                                         }}>
-                                            <div className="tracket-number no-vertical-line" style={{
-                                                backgroundColor: '#000000',
-                                                color: 'white',
-                                                borderRadius: '50%',
-                                                width: isMobile ? '30px' : '40px',
-                                                height: isMobile ? '30px' : '40px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                marginBottom: '0px',
-                                                flexShrink: 0,
-                                                position: 'relative'
-                                            }}>
-                                               <p className="text" style={{margin: '0', fontSize: isMobile ? '12px' : '14px'}}><strong>{step.toString().padStart(2, '0')}</strong></p>
-                                            </div>
+
                                             <div className="text journey-title" style={{
-                                                fontSize: isMobile ? '14px' : '16px', 
-                                                fontWeight: '600',
-                                                display: isMobile ? 'none' : 'block'
+                                                fontSize: isMobile ? '16px' : '18px', 
+                                                fontWeight: '700',
+                                                textAlign: 'center',
+                                                color: '#000000'
                                             }}>
                                                 {step === 1 && "Your Mortgage Needs"}
                                                 {step === 2 && "Financial Information"}
