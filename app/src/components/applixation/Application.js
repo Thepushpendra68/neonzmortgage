@@ -215,7 +215,7 @@ export default function Application () {
           <section id="journey">
                 <div className="container">
                     <div className="journey-intro">
-                        <h2 className="primary-heading text-center">Quick Eligibility Assessment</h2>
+                        <h2 className="primary-heading text-center">Mortgage Eligibility Assessment</h2>
                         <h5 className="text text-center">Tell us a bit about yourself, and we’ll find the best mortgage solution for you</h5>
                     </div>
 
