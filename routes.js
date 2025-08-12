@@ -4,6 +4,7 @@ const BlogControlle = require('./controllers/blogController');
 const ContactController = require('./controllers/contactUsController');
 const ApplicationController = require('./controllers/applicationController');
 const EiborController = require('./controllers/eiborController');
+const LandingApplicationController = require('./controllers/landingApplicationController');
 
 
 
@@ -57,6 +58,8 @@ router.get('/api/user/application/get/:id', ApplicationController.getByID);
 
 router.get('/api/user/eibor/get', EiborController.getEibor)
 
+// Landing page application routes
+router.post('/api/landing/application/create', LandingApplicationController.createLandingApplication);
 
 
 
