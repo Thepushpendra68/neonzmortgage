@@ -82,7 +82,7 @@ export default function PurchaseStep7() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your employment status?
+          What&apos;s your employment status?
         </h1>
         
         {/* Options */}

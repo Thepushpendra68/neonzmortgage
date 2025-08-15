@@ -81,7 +81,7 @@ export default function RefinanceStep4() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your remaining mortgage balance?
+          What&apos;s your remaining mortgage balance?
         </h1>
         
         {/* Options */}

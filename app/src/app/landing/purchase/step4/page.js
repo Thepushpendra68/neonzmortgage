@@ -83,7 +83,7 @@ export default function PurchaseStep4() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your budget range?
+          What&apos;s your budget range?
         </h1>
         
         {/* Options */}

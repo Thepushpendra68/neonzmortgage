@@ -81,7 +81,7 @@ export default function RefinanceStep5() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your property's current value?
+          What&apos;s your property&apos;s current value?
         </h1>
         
         {/* Options */}

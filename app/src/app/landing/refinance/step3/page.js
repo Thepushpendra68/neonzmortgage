@@ -81,7 +81,7 @@ export default function RefinanceStep3() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your current interest rate?
+          What&apos;s your current interest rate?
         </h1>
         
         {/* Options */}

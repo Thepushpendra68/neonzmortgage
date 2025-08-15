@@ -137,7 +137,7 @@ export default function PurchaseStep8() {
           Almost done! Your details
         </h1>
         <p className="body-text-gray text-center mb-8">
-          We'll use this information to prepare your personalized mortgage quote
+          We&apos;ll use this information to prepare your personalized mortgage quote
         </p>
         
         {/* Form */}

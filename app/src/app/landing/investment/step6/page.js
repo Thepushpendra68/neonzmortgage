@@ -60,7 +60,7 @@ export default function InvestmentStep6() {
 
       <div className="page-container">
         <ProgressBar currentStep={6} branch="investment" />
-        <h1 className="question-text text-center mb-4">What's your monthly income?</h1>
+        <h1 className="question-text text-center mb-4">What&apos;s your monthly income?</h1>
         <div className="option-cards-container">
           {options.map((option) => (
             <button

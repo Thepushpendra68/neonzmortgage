@@ -124,7 +124,7 @@ export default function RefinanceStep7() {
           Almost done! Your details
         </h1>
         <p className="body-text-gray text-center mb-8">
-          We'll use this information to analyze your current mortgage and find better rates
+          We&apos;ll use this information to analyze your current mortgage and find better rates
         </p>
         
         {/* Form */}

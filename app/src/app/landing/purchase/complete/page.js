@@ -128,7 +128,7 @@ export default function PurchaseComplete() {
           Ready to Find Your Dream Home!
         </h1>
         <p className="body-text-gray mb-4">
-          We'll help you get pre-approved and connect you with top real estate agents in Dubai.
+          We&apos;ll help you get pre-approved and connect you with top real estate agents in Dubai.
         </p>
         
         {applicationId && (

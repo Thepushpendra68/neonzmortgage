@@ -80,7 +80,7 @@ export default function InvestmentStep2() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your investment goal?
+          What&apos;s your investment goal?
         </h1>
         
         {/* Options */}

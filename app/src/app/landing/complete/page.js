@@ -78,7 +78,7 @@ export default function Complete() {
           Application Started!
         </h1>
         <p className="body-text-gray mb-8">
-          We'll contact you within 24 hours with personalized mortgage options.
+          We&apos;ll contact you within 24 hours with personalized mortgage options.
         </p>
 
         {/* Summary */}

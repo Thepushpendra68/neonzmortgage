@@ -130,10 +130,10 @@ export default function RefinanceComplete() {
 
         {/* Main Message */}
         <h1 className="heading-medium mb-6">
-          Let's Lower Your Payments!
+          Let&apos;s Lower Your Payments!
         </h1>
         <p className="body-text-gray mb-8">
-          We'll analyze your current mortgage and find better rates to save you money every month.
+          We&apos;ll analyze your current mortgage and find better rates to save you money every month.
         </p>
 
         {applicationId && (

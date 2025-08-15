@@ -81,7 +81,7 @@ export default function RefinanceStep6() {
         
         {/* Question */}
         <h1 className="question-text text-center mb-4">
-          What's your monthly income?
+          What&apos;s your monthly income?
         </h1>
         
         {/* Options */}
